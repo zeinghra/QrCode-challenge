@@ -1,0 +1,84 @@
+/*|| FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+/* || RESETS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* || VARIABLES */
+:root {
+    /* COLOR */
+    --BG-COLOR: hsl(212, 45%, 89%);
+    --FONT-COLOR-LIGHT: hsl(220, 15%, 55%);
+    --FONT-COLOR: hsl(218, 44%, 22%);
+    --CARD-BG-COLOR: hsl(0, 0%, 100%);
+
+    /* FONT */
+    --FF: 'Outfit', sans-serif;
+    --FS-S: 15px;
+    --FS-M:17px;
+    --FS-L: 24px;
+
+    /* || PADDING */
+    --PADDING-SD: 1em;
+    --PADDING-TB: 0.5em;
+
+    /* BORDERS*/
+    --BORDER-RADIUS-FIG: 0.5em;
+}
+
+/* || UTILITY CLASSES */
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+/*|| GENERAL STYLES*/
+
+body {
+    min-height: 100vh;
+    font-family: var(--FF);
+    font-size: var(--FS);
+    background-color: var(--BG-COLOR);
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+/* || CARD */
+.card {
+    width: 320px;
+    padding: var(--PADDING-SD);
+    height: 510px;
+    background-color: var(--CARD-BG-COLOR);
+    border-radius: calc(var(--PADDING-SD) + var(--BORDER-RADIUS-FIG));
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.11);
+}
+
+.card__fig img{
+    border-radius: var(--BORDER-RADIUS-FIG);
+}
+
+.card__caption {
+    padding: var(--PADDING-TB);
+    margin-bottom: 1.8rem;
+    color: var(--FONT-COLOR-LIGHT);
+}
+
+.card__caption h2 {
+    font-size: var(--FS-L);
+    font-weight: 700;
+    color: var(--FONT-COLOR);
+    margin-block: 1em;
+}
